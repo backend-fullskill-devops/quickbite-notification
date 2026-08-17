@@ -29,7 +29,6 @@ public class NotificationService {
                 .build();
 
         notificationRepository.save(notification);
-        log.info("Notification sent successfully to user {}: Title='{}', Content='{}', Type={}",
-                request.getUserId(), request.getTitle(), request.getContent(), request.getType());
+        log.info("Notification sent: userId={}, type={}", request.getUserId(), request.getType());
     }
 }
